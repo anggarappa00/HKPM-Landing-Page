@@ -505,9 +505,12 @@ p {
 }
 
 /* ===== Hero CSS ===== */
+/* background: var(--primary-color); */
 .ud-hero {
-  background: var(--primary-color);
-  padding-top: 180px;
+  background: url('https://topkonstruksi.com/wp-content/uploads/2023/09/Desain-Istana-Negara-IKN-Kemenparekraf-scaled.jpg');
+  background-size: cover;
+  background-position: center;
+  padding-top: 600px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -784,18 +787,18 @@ p {
 }
 
 /* ===== About CSS ===== */
-.ud-about {
+.ud-editor-reviewer {
   background: #f3f4fe;
   padding: 120px 0;
 }
 
 @media (max-width: 767px) {
-  .ud-about {
+  .ud-editor-reviewer {
     padding: 80px 0;
   }
 }
 
-.ud-about-wrapper {
+.ud-editor-reviewer-wrapper {
   background: var(--white);
   border: 1px solid rgba(0, 0, 0, 0.08);
   display: -webkit-box;
@@ -807,32 +810,32 @@ p {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .ud-about-wrapper {
+  .ud-editor-reviewer-wrapper {
     display: block;
   }
 }
 
-.ud-about-content-wrapper {
+.ud-editor-reviewer-content-wrapper {
   padding: 70px;
 }
 
 @media (max-width: 767px) {
-  .ud-about-content-wrapper {
+  .ud-editor-reviewer-content-wrapper {
     padding: 50px 30px;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .ud-about-content-wrapper {
+  .ud-editor-reviewer-content-wrapper {
     padding: 50px;
   }
 }
 
-.ud-about-content {
+.ud-editor-reviewer-content {
   max-width: 500px;
 }
 
-.ud-about-content .tag {
+.ud-editor-reviewer-content .tag {
   font-weight: 500;
   font-size: 14px;
   color: var(--white);
@@ -842,7 +845,7 @@ p {
   margin-bottom: 20px;
 }
 
-.ud-about-content h2 {
+.ud-editor-reviewer-content h2 {
   font-weight: bold;
   font-size: 36px;
   line-height: 45px;
@@ -850,26 +853,26 @@ p {
 }
 
 @media (max-width: 767px) {
-  .ud-about-content h2 {
+  .ud-editor-reviewer-content h2 {
     font-size: 26px;
     line-height: 38px;
   }
 }
 
-.ud-about-content p {
+.ud-editor-reviewer-content p {
   font-size: 16px;
   line-height: 28px;
   margin-bottom: 40px;
 }
 
-.ud-about-content .ud-main-btn:hover {
+.ud-editor-reviewer-content .ud-main-btn:hover {
   background: #2748b4;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .ud-about-image {
+  .ud-editor-reviewer-image {
     text-align: center;
   }
 }
@@ -2611,3 +2614,69 @@ p {
   }
 }
 /*# sourceMappingURL=ud-styles.css.map */
+
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding: 20px;
+  margin-top: 20px;
+}
+.timeline .event {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+.timeline .event .event-date {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.timeline .event-marker {
+  width: 12px;
+  height: 12px;
+  background-color: #6c757d;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.timeline .event:last-child .event-marker {
+  height: 16px;
+  width: 16px;
+  background-color: #6c757d;
+}
+.timeline .line {
+  width: 100%;
+  height: 2px;
+  background-color: #6c757d;
+  position: absolute;
+  top: 6px;
+  left: 0;
+  z-index: -1;
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 767px) {
+  .timeline .line {
+      width: 2px;
+      height: calc(100% - 40px); /* Adjust to match the height of the timeline content */
+      left: 0;
+      top: 20px;
+      transform: none;
+      position: absolute;
+  }
+  .timeline .event {
+      width: 100%;
+      text-align: left;
+      padding-left: 30px;
+      padding-right: 10px;
+      position: relative;
+  }
+  .timeline .event .event-marker {
+      position: absolute;
+      left: 15px;
+      top: 30px;
+      transform: translateX(-50%);
+  }
+}
